@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "623057273056",
+    "project_id": "hale-2",
+    "storage_bucket": "hale-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623057273056:android:9e3c8df3411de5ec1c1085",
+        "android_client_info": {
+          "package_name": "org.o7planning.hale_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "623057273056-udaonrmvibt4b2opfnmoo5k27t6cfjti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJg0Vyjzm-46LXiGnnwNM-nwymhMs9N5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "623057273056-udaonrmvibt4b2opfnmoo5k27t6cfjti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

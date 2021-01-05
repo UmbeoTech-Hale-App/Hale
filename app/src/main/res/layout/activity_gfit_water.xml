@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="99dp"
+        android:gravity="center"
+        android:text="Simple Maths Based Periodic Reminder to drink water"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="396dp"
+        android:gravity="center"
+        android:text="This needs some better thought process like the user may want to have a
+customized hydration plan so it depends what info user will provide and so the parameters are yet to be decided"
+        android:textSize="20dp" />
+
+</RelativeLayout>
