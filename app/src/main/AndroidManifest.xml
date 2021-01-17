@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.o7planning.hale_2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/hale"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/BaseTheme"
+        android:name=".AppUsageStats.app.MyApplication"
+        >
+
+<!--        //AppMonitor One-->
+        <service android:name=".AppUsageStats.Service.AppService" />
+        <service android:name=".AppUsageStats.Service.AlarmService" />
+
+        <receiver
+            android:name=".AppUsageStats.receiver.AlarmReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ALARM_RECEIVER" />
+            </intent-filter>
+        </receiver>
+<!--        App Monitor-->
+<!--        ///////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <service android:name=".S_R.Service.YourService" />
+
+        <receiver
+            android:name=".S_R.Receiver.ScreenReminderBroadcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                      </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".S_R.Service.Restarter"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+                <action android:name="android.intent.action.MY_PACKAGE_SUSPENDED" />
+
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.MY_PACKAGE_SUSPENDED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".S_R.Receiver.NotificationReminderBroadcast"/>
+
+<!--        ///////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--        ///////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <activity android:name=".Screens.SplashScreenActivity"
+            android:theme="@style/BaseTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity"
+        android:theme="@style/Theme.Design.NoActionBar" />
+
+        <activity android:name=".Screens.LoginScreenActivity" />
+        <activity android:name=".Screens.SwipeScreenActivity" />
+        <activity android:name=".Screens.ProfileScreenActivity" />
+
+        <activity android:name=".GFitActivities.StepsActivity" />
+        <activity android:name=".GFitActivities.HeartBeatBPActivity" />
+        <activity android:name=".GFitActivities.SleepAnalysisActivity" />
+        <activity android:name=".GFitActivities.ScreenAnalysisActivity" />
+        <activity android:name=".GFitActivities.WaterIntakeActivity" />
+        <activity android:name=".AppUsageStats.AppUsageActivity" />
+
+        <activity android:name=".retrofit.Activity_Retrofit" />
+
+        <activity android:name=".Screens.CompleteProfileActivity" />
+        <activity android:name=".Screens.WaterStatsActivity" />
+        <activity android:name=".Screens.WaterMainActivity" />
+
+    </application>
+
+</manifest>
+
